@@ -8,32 +8,47 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './screens/home/home.component';
 import { CollaborationsComponent } from './screens/collaborations/collaborations.component';
 //Components
-import { TeamComponent } from './components/team/team.component'
-import { AboutComponent } from './components/about/about.component';
+ import { AboutComponent } from './components/about/about.component';
 import { IncubationJourneyComponent } from './components/incubationJourney/incubationJourney.component';
+import { TeamComponent } from './components/team/team.component'
 import { WhyToJoinComponent } from './components/whyToJoin/whyToJoin.component';
 import { SignUpComponent } from './components/signUp/signUp.component';
 //Service
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesService } from './services/services.service';
- 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+ 
     HomeComponent,
     CollaborationsComponent,
-    TeamComponent,
-    AboutComponent,
+     AboutComponent,
     IncubationJourneyComponent,
+    TeamComponent,
     WhyToJoinComponent,
-    SignUpComponent
+    SignUpComponent,
+
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatStepperModule,
+    MatDividerModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent,ServicesService]

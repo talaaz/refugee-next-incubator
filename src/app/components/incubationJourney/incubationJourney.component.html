@@ -1,53 +1,69 @@
 <h2>Your Journey</h2>
-<p>
-  Entrepreneurship School → Accounting classes → Co-founder matching →
-  Mentorship → Funding (6 months)
-</p>
-<ol>
-  <li>
-    Chapter One
-    <p>
-      Manage your classes on your own time! All our classes are online, and are
-      interactive for a better learning experience.
-    </p>
-    <ol>
-      <li>Before: Dont have an idea yet? We will help you come up with one.</li>
-      <li>
-        Week 1: Turning your startup vision into a business plan: The Business
-        Model Canvas
-      </li>
-      <li>Week 2: Market Validation (TAM, SAM, SOM)</li>
-      <li>Week 3: Resource Mobilization</li>
-      <li>Week 4: Building your prototype</li>
-      <li>Week 5: Marketing</li>
-      <li>Week 6: Pitching</li>
-      <li>Week 7: The mindset of a successful entrepreneur</li>
-    </ol>
-  </li>
-  <li>
-    Accounting (Online)
-    <p>
-      Learn how to manage your cash flow, maintain a balance sheet, identifying
-      a path to profitability and forecasting the future of your business.
-    </p>
-  </li>
-  <li>
-    Co-founder matching
-    <p>
-      We will help you find a Danish co-founder who is passionate about the same
-      field as you and can help maneuver through the Danish system.
-    </p>
-  </li>
-  <li>
-    Mentorship
-    <p>
-      We will match your team with an experienced business mentor who has worked
-      in your field. They can give you advice, support and network to help you
-      along.
-    </p>
-  </li>
-  <li>
-    Funding
+<mat-stepper orientation="vertical">
+  <mat-step>
+    <ng-template matStepLabel>Classes</ng-template>
+    <ng-template matStepContent>
+      <p>
+        Manage your classes on your own time! All our classes are online, and
+        are interactive for a better learning experience.
+      </p>
+      <ol>
+        <li>
+          Before: Dont have an idea yet? We will help you come up with one.
+        </li>
+        <li>
+          Week 1: Turning your startup vision into a business plan: The Business
+          Model Canvas
+        </li>
+        <li>Week 2: Market Validation (TAM, SAM, SOM)</li>
+        <li>Week 3: Resource Mobilization</li>
+        <li>Week 4: Building your prototype</li>
+        <li>Week 5: Marketing</li>
+        <li>Week 6: Pitching</li>
+        <li>Week 7: The mindset of a successful entrepreneur</li>
+      </ol>
+      <button mat-button matStepperNext>Next</button>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Accounting (Online)</ng-template>
+    <ng-template matStepContent>
+      <p>
+        Learn how to manage your cash flow, maintain a balance sheet,
+        identifying a path to profitability and forecasting the future of your
+        business.
+      </p>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Mentorship</ng-template>
+    <ng-template matStepContent>
+      <p>
+        We will match your team with an experienced business mentor who has
+        worked in your field. They can give you advice, support and network to
+        help you along.
+      </p>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Co-founder matching</ng-template>
+    <ng-template matStepContent>
+      <p>
+        We will help you find a Danish co-founder who is passionate about the
+        same field as you and can help maneuver through the Danish system.
+      </p>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel> Funding</ng-template>
     <p>Helping you apply for soft funding and funding competitions.</p>
-  </li>
-</ol>
+
+    <button mat-button matStepperPrevious>Back</button>
+  </mat-step>
+</mat-stepper>
