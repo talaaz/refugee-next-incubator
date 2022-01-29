@@ -13,11 +13,13 @@ export class CollaborationsComponent implements OnInit   {
 
   ngOnInit() {
     this.FormData = this.builder.group({
-      Fullname: new FormControl('', [Validators.required]),
+      Firstname: new FormControl('', [Validators.required]),
+      Lastname: new FormControl('', [Validators.required]),
       Email: new FormControl('', [Validators.required]),
       Comment: new FormControl('', [Validators.required])
     });
   }
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
 
   onSubmit(FormData: FormGroup) {
