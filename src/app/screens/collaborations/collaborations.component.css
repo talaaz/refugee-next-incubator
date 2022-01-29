@@ -17,3 +17,9 @@ td {
 p {
   font-size: medium;
 }
+
+h2 {
+  color: #155e99;
+  font-weight: bold;
+  font-style: italic;
+}
