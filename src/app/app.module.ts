@@ -23,8 +23,12 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +52,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatStepperModule,
     MatDividerModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatProgressBarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent,ServicesService]

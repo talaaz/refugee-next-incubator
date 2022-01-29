@@ -1,17 +1,21 @@
 <mat-toolbar color="primary">
+  <!--Title-->
   <mat-toolbar-row>
-    <span>Refugee N->xt</span>
+    <div>
+      <span style="font-size: 150%; background: inherit">
+        <img src="assets/photos/logo.svg" />
+      </span>
+    </div>
     <span class="example-spacer"></span>
-    <button aria-label="Example icon-button with heart icon">Home</button>
-    <button aria-label="Example icon-button with share icon">
-      Collaboration
-    </button>
-    <a aria-hidden="false" routerLink="/collaborations">Collaboration</a>
-    <a aria-hidden="false" routerLink="/home">Home</a>
-  </mat-toolbar-row>
 
+    <a mat-button routerLink="/home">Home</a>
+    <a mat-button routerLink="/collaborations"> Collaboration</a>
+  </mat-toolbar-row>
+  <!--Subtitle-->
   <mat-toolbar-row>
-    <span>Accelerating refugees in Denmark</span>
+    <span style="font-size: 100%; background: inherit"
+      >Accelerating refugees in Denmark</span
+    >
     <span class="example-spacer"></span>
   </mat-toolbar-row>
 </mat-toolbar>
