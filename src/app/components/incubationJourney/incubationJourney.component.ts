@@ -7,8 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: [ './incubationJourney.component.css' ]
 })
 export class IncubationJourneyComponent implements OnInit {
- 
+  gfg: any[];
+
     ngOnInit(): void {
+      this.gfg = [
+        {
+          status: "Time 1",
+        },
+        {
+          status: "Time 2",
+        },
+        {
+          status: "Time 3",
+        },
+        {
+          status: "Time 4",
+        },
+      ];
     }
 }
 
