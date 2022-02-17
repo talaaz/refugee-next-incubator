@@ -1,0 +1,57 @@
+{
+    "TITLE": "Digibator",
+    "SUBTITLE": "Accelerating refugees and socailly disadvangted groups in Denmark",
+    "MENU": {
+        "HOME": "الرئيسية",
+        "COLLABORATION": "تعاون معنا"
+    },
+    "BODY":{
+        "INTRODUCTION":"منصة مجانية لمساعدتك على تطوير فكرتك و انتاجها",
+        "TIMELINE": {
+            "CLASSES": {
+                "TITLE": "الصفوف",
+                "BODY": "شارك بالصفوف في "
+            },
+            "COFOUNDER": {
+                "TITLE": "ايجاد شريك",
+                "BODY": "We will help you find a Danish co-founder who is passionate about the same field as you and can help maneuver through the Danish system."
+            }, 
+            "ACCOUNTING": {
+                "TITLE": "حسابات مصرفية",
+                "BODY": "Learn how to manage your cash flow, maintain a balance sheet, identifying a path to profitability and forecasting the future of your business."
+            },       
+            "MENTORSHIP": {
+                "TITLE": "مساعد",
+                "BODY": "We will match your team with an experienced business mentor who has worked in your field. They can give you advice, support and network to help you along."
+            },
+            "FUNDING": {
+                "TITLE": "تمويل ",
+                "BODY": "Helping you apply for soft funding and funding competitions."
+            }
+        },
+        "BENEFITS": {
+            "TITLE":"Why to join?",
+            "BODY": "We know how complicated and challenging the Danish system can be for entrepreneurial refugees. Many refugees businesses fail in Denmark because they do not prepare, understand the Danish system and lack funding. Therefore, we have tailored this program for refugees in Denmark to learn everything there is to know before starting a business in Denmark. Do it on your own time, anywhere Do it in your own language Get experience, network and access to funding"
+        }, 
+        "TEAM": {
+            "TITLE": "A bit about us", 
+            "BODY": "We are an early-stage startup founded with a vision to help refugees integrate better through entrepreneurship. Tala is a Syrian refugee and an MSc student in Human-centered AI at DTU. As she is a top student in Denmark, she has many opportunities for the older refugee generation. Therefore, she came up with idea of solving the problem through entrepreneurship",
+            "MEMBERS": {
+                "MEMBER1": {
+                    "NAME": "تالا ازرق",
+                    "ROLE": "CEO & Founder"
+                }, 
+                "MEMBER2": {
+                    "NAME": "هادي حوراني",
+                    "ROLE": "CTO"
+                }, 
+                "MEMBER3": {
+                    "NAME": "Francesco Rosati",
+                    "ROLE": "Advisory board member"
+                }
+            }
+        }
+
+    }
+ 
+}

@@ -7,14 +7,22 @@
       </span>
     </div>
     <span class="example-spacer"></span>
-
-    <a mat-button routerLink="/home">Home</a>
+    Change Language :
+    <select #selLang (change)="translateLanguageTo(selLang.value)">
+      <option *ngFor="let language of translate.getLangs()" [value]="language">
+        {{ language }}
+      </option>
+      <script>
+        console.log(setLang.value);
+      </script>
+    </select>
+    <a mat-button routerLink="/home">{{ "MENU.HOME" | translate }} </a>
     <a mat-button routerLink="/collaborations"> Collaboration</a>
   </mat-toolbar-row>
   <!--Subtitle-->
   <mat-toolbar-row>
     <span style="font-size: 100%; background: inherit"
-      >Accelerating refugees in Denmark</span
+      >Accelerating refugees and socailly disadvangted groups in Denmark</span
     >
     <span class="example-spacer"></span>
   </mat-toolbar-row>
