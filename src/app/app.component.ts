@@ -9,7 +9,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'refugee n->xt';
-
+  subtitle = ""; 
+  menu = {};
+  body: {};
 
   
   constructor(
@@ -19,10 +21,24 @@ export class AppComponent {
     translate.addLangs(['ar', 'en']);
     // Set default language
     translate.setDefaultLang('ar');
+
   }  
 //Switch language
   translateLanguageTo(lang: string) {
     this.translate.use(lang);
     console.log(lang)
   }
+
+
+  getTitleString() {
+    // asynchronous - gets translations then completes.
+    this.translate.get(['TITLE', 'SUBTITLE','MENU', 'BODY',])
+      .subscribe(translations => {
+        this.title = translations['TITLE'];
+        this.subtitle = translations['SUBTITLE'];
+        this.menu = translations['MENU']
+        this.body = translations['BODY']
+       });
+  }
+
 }

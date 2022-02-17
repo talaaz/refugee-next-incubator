@@ -1,31 +1,53 @@
-<mat-toolbar color="primary">
-  <!--Title-->
-  <mat-toolbar-row>
-    <div>
-      <span style="font-size: 150%; background: inherit">
-        <img src="assets/photos/logo.svg" />
-      </span>
-    </div>
-    <span class="example-spacer"></span>
-    Change Language :
-    <select #selLang (change)="translateLanguageTo(selLang.value)">
-      <option *ngFor="let language of translate.getLangs()" [value]="language">
-        {{ language }}
-      </option>
-      <script>
-        console.log(setLang.value);
-      </script>
-    </select>
-    <a mat-button routerLink="/home">{{ "MENU.HOME" | translate }} </a>
-    <a mat-button routerLink="/collaborations"> Collaboration</a>
-  </mat-toolbar-row>
-  <!--Subtitle-->
-  <mat-toolbar-row>
-    <span style="font-size: 100%; background: inherit"
-      >Accelerating refugees and socailly disadvangted groups in Denmark</span
-    >
-    <span class="example-spacer"></span>
-  </mat-toolbar-row>
-</mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" routerLink="">Refugee Next</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div></div>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        Change Language :
+        <select #selLang (change)="translateLanguageTo(selLang.value)">
+          <option
+            *ngFor="let language of translate.getLangs()"
+            [value]="language"
+          >
+            {{ language }}
+          </option>
+        </select>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink=""
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="course">{{
+          "MENU.HOME" | translate
+        }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="joinnow">Joinnow</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <router-outlet></router-outlet>
+
+<!-- footer -->
+<footer class="text-center mt-2">
+  <p>&copy; eeducation 2020. All right reserved</p>
+</footer>

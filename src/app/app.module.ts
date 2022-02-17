@@ -8,11 +8,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './screens/home/home.component';
 import { CollaborationsComponent } from './screens/collaborations/collaborations.component';
 //Components
- import { AboutComponent } from './components/about/about.component';
-import { IncubationJourneyComponent } from './components/incubationJourney/incubationJourney.component';
 import { TeamComponent } from './components/team/team.component'
 import { WhyToJoinComponent } from './components/whyToJoin/whyToJoin.component';
 import { SignUpComponent } from './components/signUp/signUp.component';
+import { CourseComponent } from './components/course/course.component';
+import { AboutComponent2 } from './components/about2/about2.component'; 
+import { TeamComponent2 } from './components/team2/team2.component';
 //Service
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesService } from './services/services.service';
@@ -29,7 +30,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
- 
 //Translatte 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -44,15 +44,14 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
- 
+    AboutComponent2,
     HomeComponent,
     CollaborationsComponent,
-     AboutComponent,
-    IncubationJourneyComponent,
     TeamComponent,
     WhyToJoinComponent,
     SignUpComponent,
-
+    CourseComponent,
+    TeamComponent2
    ],
   imports: [
     BrowserModule,
