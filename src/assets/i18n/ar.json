@@ -1,32 +1,36 @@
 {
-    "TITLE": "Digibator",
+    "TITLE": "ابدأ",
     "SUBTITLE": "Accelerating refugees and socailly disadvangted groups in Denmark",
     "MENU": {
         "HOME": "الرئيسية",
-        "COLLABORATION": "تعاون معنا"
+        "COLLABORATION": " تعاون معنا"
     },
     "BODY":{
-        "INTRODUCTION":"منصة مجانية لمساعدتك على تطوير فكرتك و انتاجها",
+        "INTRODUCTION": {
+            "TITLE": " حول منصة ابدأ",
+            "BODY":"من الإيمان الراسخ بأهمية الكفاءات الموجودة لدى الجميع ننشأ منصة ابدأ لإعطاء فرصة تلبي احتياجات الجميع لبدء مستقبل جديد وإنشاء مشروع خاص ومميز" 
+        },  
         "TIMELINE": {
+            "TITLE":"رحلتك",
             "CLASSES": {
-                "TITLE": "الصفوف",
-                "BODY": "شارك بالصفوف في "
+                "TITLE":   " مدرسة ريادة الأعمال اونلاين ",
+                "BODY": "يمكنك الالتحاق بدروسنا التعليمية عن ريادة الأعمال وَفْقاً للأوقات المفضلة لديك وستجد التفاعل والمساعدة في أي وقت                 "
             },
             "COFOUNDER": {
-                "TITLE": "ايجاد شريك",
-                "BODY": "We will help you find a Danish co-founder who is passionate about the same field as you and can help maneuver through the Danish system."
+                "TITLE": "العثور على شريك عمل",
+                "BODY": "تستطيع الحصول على شريك دنماركي لمشاركتك في مشروعك الخاص وأزاحه العقبات التي تحول دون تحقيق مشروعك"
             }, 
             "ACCOUNTING": {
-                "TITLE": "حسابات مصرفية",
-                "BODY": "Learn how to manage your cash flow, maintain a balance sheet, identifying a path to profitability and forecasting the future of your business."
+                "TITLE": "إدارة الحساب المصرفي",
+                "BODY": " نقدم لك شرح مُفصّل عن الميزانية وجميع الأمور المالية الأخرى المتعلقة بالمشروع  والتنبؤ بالجدوى الاقتصادية من مشروعك.                "
             },       
             "MENTORSHIP": {
-                "TITLE": "مساعد",
-                "BODY": "We will match your team with an experienced business mentor who has worked in your field. They can give you advice, support and network to help you along."
+                "TITLE": "مرشد",
+                "BODY": " نقدم لك مرشد لمساعدتك ونصحك في الأمور المتعلقة بمشروعك"
             },
             "FUNDING": {
-                "TITLE": "تمويل ",
-                "BODY": "Helping you apply for soft funding and funding competitions."
+                "TITLE": " التمويل المادي ",
+                "BODY": " نساعدك للحصول على فرص لتمويل مشروع بأفضل الطرق المالية"
             }
         },
         "BENEFITS": {
@@ -34,20 +38,20 @@
             "BODY": "We know how complicated and challenging the Danish system can be for entrepreneurial refugees. Many refugees businesses fail in Denmark because they do not prepare, understand the Danish system and lack funding. Therefore, we have tailored this program for refugees in Denmark to learn everything there is to know before starting a business in Denmark. Do it on your own time, anywhere Do it in your own language Get experience, network and access to funding"
         }, 
         "TEAM": {
-            "TITLE": "A bit about us", 
-            "BODY": "We are an early-stage startup founded with a vision to help refugees integrate better through entrepreneurship. Tala is a Syrian refugee and an MSc student in Human-centered AI at DTU. As she is a top student in Denmark, she has many opportunities for the older refugee generation. Therefore, she came up with idea of solving the problem through entrepreneurship",
+            "TITLE": "من نحن", 
+            "BODY": " نحن شركة ناشئة في مراحلها الأولى تأسست برؤية لمساعدة اللاجئين على الاندماج بشكل أفضل من خلال ريادة الأعمال. تالا هي لاجئة سورية وطالبة ماجستير في الذكاء الاصطناعي المتمحور حول الإنسان في جامعة التقنية الدنمركية. نظرًا لأنها طالبة متفوقة في الدنمارك، فإن لديها العديد من الفرص الغير متاحة لجيل اللاجئين الأكبر سنًا. لذلك خطرت لها فكرة حل المشكلة من خلال ريادة الأعمال",
             "MEMBERS": {
                 "MEMBER1": {
                     "NAME": "تالا ازرق",
-                    "ROLE": "CEO & Founder"
+                    "ROLE": "المؤسس والرئيس التنفيذي                    "
                 }, 
                 "MEMBER2": {
                     "NAME": "هادي حوراني",
-                    "ROLE": "CTO"
+                    "ROLE": "الرئيس التنفيذي للتكنولوجيا"
                 }, 
                 "MEMBER3": {
                     "NAME": "Francesco Rosati",
-                    "ROLE": "Advisory board member"
+                    "ROLE": "عضو مجلس الإدارة "
                 }
             }
         }

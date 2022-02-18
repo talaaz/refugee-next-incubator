@@ -1,15 +1,19 @@
 {
-    "TITLE": "Digibator",
+    "TITLE": "Ibda'",
     "SUBTITLE": "Accelerating refugees and socailly disadvangted groups in Denmark",
     "MENU": {
         "HOME": "Home",
         "COLLABORATION": "Collaboration"
     },
-    "BODY":{
-        "INTRODUCTION":"Digibator is a free 6-week digital incubator for refugees. It will help you turn your business idea to reality. This will happen by providing you business knowledge, teaming you up with a community member to share the journey with you, providing you accounting courses, network and soft funding to start your business.",
+    "BODY":{  
+        "INTRODUCTION": {
+            "TITLE": "What is Ibda'?",
+            "BODY":"Ibda' is a free  digital incubator for refugees. It will help you turn your business idea to reality. This will happen by providing you business knowledge, teaming you up with a community member to share the journey with you, providing you accounting courses, network and soft funding to start your business." 
+        },   
         "TIMELINE": {
+            "TITLE":"Incubation journey",
             "CLASSES": {
-                "TITLE": "Classes",
+                "TITLE": "Entrepreneurship School (Online)",
                 "BODY": "Manage your classes on your own time! All our classes are online, and are interactive for a better learning experience"
             },
             "COFOUNDER": {

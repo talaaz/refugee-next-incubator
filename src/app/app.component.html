@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" routerLink="">Refugee Next</a>
+  <a class="navbar-brand" routerLink="">Ibda'</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -28,26 +28,21 @@
       </li>
       <li class="nav-item active">
         <a class="nav-link" routerLink=""
-          >Home <span class="sr-only">(current)</span></a
+          >{{ "MENU.HOME" | translate }}
+          <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="course">{{
-          "MENU.HOME" | translate
+        <a class="nav-link" routerLink="collaborations">{{
+          "MENU.COLLABORATION" | translate
         }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="joinnow">Joinnow</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="about">About</a>
       </li>
     </ul>
   </div>
 </nav>
 <router-outlet></router-outlet>
 
-<!-- footer -->
+<!--footer-->
 <footer class="text-center mt-2">
-  <p>&copy; eeducation 2020. All right reserved</p>
+  <!--  <p>&copy; eeducation 2020. All right reserved</p> -->
 </footer>
