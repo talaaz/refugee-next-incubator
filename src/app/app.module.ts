@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './screens/home/home.component';
 import { CollaborationsComponent } from './screens/collaborations/collaborations.component';
 //Components
-import { TeamComponent } from './components/team/team.component'
 import { WhyToJoinComponent } from './components/whyToJoin/whyToJoin.component';
 import { SignUpComponent } from './components/signUp/signUp.component';
 import { CourseComponent } from './components/course/course.component';
@@ -47,7 +46,6 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     AboutComponent2,
     HomeComponent,
     CollaborationsComponent,
-    TeamComponent,
     WhyToJoinComponent,
     SignUpComponent,
     CourseComponent,

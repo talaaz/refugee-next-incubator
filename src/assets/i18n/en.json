@@ -37,6 +37,13 @@
             "TITLE":"Why to join?",
             "BODY": "We know how complicated and challenging the Danish system can be for entrepreneurial refugees. Many refugees businesses fail in Denmark because they do not prepare, understand the Danish system and lack funding. Therefore, we have tailored this program for refugees in Denmark to learn everything there is to know before starting a business in Denmark. Do it on your own time, anywhere Do it in your own language Get experience, network and access to funding"
         }, 
+        "SignUp":{
+            "TITLE": "Are you interested? sign up now and we will contact you soon",
+            "BODY": {
+                "NAMEPLACEHOLDER":"Full name",
+                "BUTTONTITLE":"Sign up"
+            }
+        },
         "TEAM": {
             "TITLE": "A bit about us", 
             "BODY": "We are an early-stage startup founded with a vision to help refugees integrate better through entrepreneurship. Tala is a Syrian refugee and an MSc student in Human-centered AI at DTU. As she is a top student in Denmark, she has many opportunities for the older refugee generation. Therefore, she came up with idea of solving the problem through entrepreneurship",

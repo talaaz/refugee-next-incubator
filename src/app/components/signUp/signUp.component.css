@@ -14,3 +14,6 @@ h2 {
   width: 100%;
   margin-bottom: 10%;
 }
+.modal-backdrop {
+  background-color: transparent;
+}

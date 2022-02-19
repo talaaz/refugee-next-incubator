@@ -37,6 +37,13 @@
             "TITLE":"Why to join?",
             "BODY": "We know how complicated and challenging the Danish system can be for entrepreneurial refugees. Many refugees businesses fail in Denmark because they do not prepare, understand the Danish system and lack funding. Therefore, we have tailored this program for refugees in Denmark to learn everything there is to know before starting a business in Denmark. Do it on your own time, anywhere Do it in your own language Get experience, network and access to funding"
         }, 
+        "SignUp":{
+            "TITLE": "هل انت مهتم?سجل الان وسوف نتواصل معك لاحقا",
+            "BODY": {
+                "NAMEPLACEHOLDER":"الاسم الكامل",
+                "BUTTONTITLE":"سجل هنا"
+            }
+        },
         "TEAM": {
             "TITLE": "من نحن", 
             "BODY": " نحن شركة ناشئة في مراحلها الأولى تأسست برؤية لمساعدة اللاجئين على الاندماج بشكل أفضل من خلال ريادة الأعمال. تالا هي لاجئة سورية وطالبة ماجستير في الذكاء الاصطناعي المتمحور حول الإنسان في جامعة التقنية الدنمركية. نظرًا لأنها طالبة متفوقة في الدنمارك، فإن لديها العديد من الفرص الغير متاحة لجيل اللاجئين الأكبر سنًا. لذلك خطرت لها فكرة حل المشكلة من خلال ريادة الأعمال",
