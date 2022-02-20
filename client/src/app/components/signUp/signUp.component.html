@@ -10,7 +10,17 @@
                 <label class="sr-only">{{
                   "BODY.SignUp.BODY.NAMEPLACEHOLDER" | translate
                 }}</label>
-                <input type="text" class="form-control" placeholder="Name" />
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    required
+                    [(ngModel)]="puser.name"
+                    name="name"
+                    minlength="4"
+                  />
+                </div>
               </div>
               <!--  <div class="form-group">
                 <label class="sr-only">Email</label>
@@ -20,7 +30,12 @@
                   placeholder="jane.doe@example.com"
                 />
               </div>-->
-              <button type="submit" class="btn btn-success" onclick="addPUser">
+
+              <button
+                type="submit"
+                class="btn btn-success"
+                (click)="createPUser()"
+              >
                 {{ "BODY.SignUp.BODY.BUTTONTITLE" | translate }}
               </button>
             </form>

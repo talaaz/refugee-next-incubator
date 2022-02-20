@@ -22,6 +22,7 @@ export const addPUser = async (req: Request, res: Response) => {
   
       pUser.set(pUserObject)
   
+      res.set("Access-Control-Allow-Origin", "*");
       res.status(201).send({
         status: 'success',
         message: 'pUser added successfully',

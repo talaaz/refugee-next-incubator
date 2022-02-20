@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/refugee-next-incubator",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
