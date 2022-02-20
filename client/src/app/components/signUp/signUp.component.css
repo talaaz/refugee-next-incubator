@@ -1,0 +1,19 @@
+h2 {
+  font-weight: bold;
+  font-style: italic;
+  color: #155e99;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  font-size: large;
+}
+
+.example-full-width {
+  width: 100%;
+  margin-bottom: 10%;
+}
+.modal-backdrop {
+  background-color: transparent;
+}
