@@ -51,7 +51,7 @@
             "MEMBERS": {
                 "MEMBER1": {
                     "NAME": "Tala Azrak",
-                    "ROLE": "CEO & Founder"
+                    "ROLE": "CEO & Co-Founder"
                 }, 
                 "MEMBER2": {
                     "NAME": "Hadi Horani",
@@ -59,7 +59,7 @@
                 }, 
                 "MEMBER3": {
                     "NAME": "Francesco Rosati",
-                    "ROLE": "Advisory board member"
+                    "ROLE": "Co-Founder & Advisory board member"
                 }
             }
         }

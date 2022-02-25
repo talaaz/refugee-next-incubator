@@ -8,7 +8,7 @@ type EntryType = {
   
   type Request = {
     body: EntryType,
-    params: { entryId: string }
+    params: { pUserId: string }
   }
 
 export const addPUser = async (req: Request, res: Response) => {
