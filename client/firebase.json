@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/refugee-next-incubator",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
