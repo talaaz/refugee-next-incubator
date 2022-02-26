@@ -1,47 +1,59 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" routerLink="">Ibda'</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-light bg-light navbar-expand-lg">
+  <!-- flex-nowrap align-items-start -->
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div></div>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        {{ "MENU.LANGUAGE" | translate }}
-        <select #selLang (change)="translateLanguageTo(selLang.value)">
-          <option
-            *ngFor="let language of translate.getLangs()"
-            [value]="language"
-          >
-            {{ language }}
-          </option>
-        </select>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" routerLink=""
-          >{{ "MENU.HOME" | translate }}
-          <span class="sr-only">(current)</span></a
-        >
-      </li>
-      <li class="nav-item">
-        <!--routerLink="collaborations"-->
-        <a class="nav-link">{{ "MENU.COLLABORATION" | translate }}</a>
-      </li>
-    </ul>
+  <div class="d-flex flex-column">
+    <div class="d-sm-flex d-block flex-nowrap">
+      <a class="navbar-brand" href="#">
+        <img src="assets/photos/RNlogo.png" />
+      </a>
+      <a class="navbar-brand" href="#">Refugee Next</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- <div></div> -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            {{ "MENU.LANGUAGE" | translate }}
+            <select #selLang (change)="translateLanguageTo(selLang.value)">
+              <option
+                *ngFor="let language of translate.getLangs()"
+                [value]="language"
+              >
+                {{ language }}
+              </option>
+            </select>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink=""
+              >{{ "MENU.HOME" | translate }}
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <!--routerLink="collaborations"-->
+            <a class="nav-link" routerLink="collaborations">{{
+              "MENU.COLLABORATION" | translate
+            }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <small> {{ "SUBTITLE" | translate }} </small>
   </div>
 </nav>
 <router-outlet></router-outlet>
 
 <!--footer-->
 <footer class="text-center mt-2">
-  <!--  <p>&copy; eeducation 2020. All right reserved</p> -->
+  <p>refugeenext@gmail.com</p>
 </footer>

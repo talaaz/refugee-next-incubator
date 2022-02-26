@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';  
-//App 
+ //App 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //Screens
 import { HomeComponent } from './screens/home/home.component';
-//import { CollaborationsComponent } from './screens/collaborations/collaborations.component';
+import { CollaborationsComponent } from './screens/collaborations/collaborations.component';
 //Components
 import { WhyToJoinComponent } from './components/whyToJoin/whyToJoin.component';
 import { SignUpComponent } from './components/signUp/signUp.component';
@@ -17,7 +16,7 @@ import { TeamComponent2 } from './components/team2/team2.component';
 import { HttpClientModule } from '@angular/common/http';
  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {PuserService} from '../app/services/puser.service'
-
+import {CollaboratorService} from '../app/services/collaborator.service';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatDividerModule} from '@angular/material/divider';
@@ -34,7 +33,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 
-import { FormsModule } from '@angular/forms';
+ import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -46,7 +45,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     AppComponent,
     AboutComponent2,
     HomeComponent,
-  //  CollaborationsComponent,
+  CollaborationsComponent,
     WhyToJoinComponent,
     SignUpComponent,
     CourseComponent,
@@ -56,7 +55,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,
+     HttpClientModule,
+     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatStepperModule,
@@ -69,8 +69,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     MatButtonToggleModule,
     MatTabsModule,
     MatInputModule,
-    FormsModule,
-    TranslateModule.forRoot({
+ 
+     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: httpTranslateLoaderFactory,
@@ -78,7 +78,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [PuserService],
-  bootstrap: [AppComponent]
+  providers: [PuserService,CollaboratorService],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
