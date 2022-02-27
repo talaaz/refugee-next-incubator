@@ -1,40 +1,44 @@
+import * as nodemailer from "nodemailer";
 import { Response } from 'express'
-import { db } from '../config/firebase'
-
 
 type EntryType = {
-    firstName: string,
-    lastName: string,
-    email: string,
-    comment: string
-  }
-  
-  type Request = {
-    body: EntryType,
-    params: { collaboratorId: string }
-  }
+  firstName: string,
+  lastName: string,
+  email: string,
+  comment:string
+}
 
-export const addCollaborator = async (req: Request, res: Response) => {
-    const { firstName, lastName, email, comment } = req.body
-    try {
-      const collaborator = db.collection('collaborators').doc()
-      const collaboratorObject = {
-        id: collaborator.id,
-        firstName, 
-        lastName, 
-        email, 
-        comment 
+type Request = {
+  body: EntryType,
+}
+ 
+export const sendCollaborationEmail = async (req: Request, res: Response) => {
+  const mailOptions = {
+    from: req.body.email,
+    to: 'refugeenext@gmail.com',
+    subject:  req.body.firstName+   req.body.lastName,
+    text:  req.body.comment
+  };
+
+  // returning result
+  return transporter.sendMail(mailOptions, (erro:any, info:any) => {
+      if(erro){
+          return res.send(erro.toString());
       }
-  
-      collaborator.set(collaboratorObject)
-  
-      res.set("Access-Control-Allow-Origin", "*");
-      res.status(201).send({
-        status: 'success',
-        message: 'collaborator added successfully',
-        data: collaboratorObject
-      })
-    } catch(error) {
-        res.status(500).json(error)
-    }
-  }
+      return res.status(200).send('Sended');
+  });
+}
+
+var transporter = nodemailer.createTransport({
+      service: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: 'refugeenext@gmail.com',
+        pass: 'Talas184235'
+      }
+});
+
+
+ 
+ 
