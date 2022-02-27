@@ -15,27 +15,27 @@ type Request = {
 export const sendCollaborationEmail = async (req: Request, res: Response) => {
   const mailOptions = {
     from: req.body.email,
-    to: 'refugeenext@gmail.com',
-    subject:  req.body.firstName+   req.body.lastName,
+    to: '',
+    subject:  "New collaboration request from: " + req.body.firstName + " " + req.body.lastName,
     text:  req.body.comment
   };
 
   // returning result
-  return transporter.sendMail(mailOptions, (erro:any, info:any) => {
-      if(erro){
-          return res.send(erro.toString());
+  return transporter.sendMail(mailOptions, (error, info) => {
+      if(error){
+          return res.status(500).send(error.toString());
       }
-      return res.status(200).send('Sended');
+      return res.status(200).send('Email sent: ' + info.response);
   });
 }
 
 var transporter = nodemailer.createTransport({
-      service: 'smtp.gmail.com',
+      service: 'Gmail',
       port: 465,
       secure: true,
       auth: {
-        user: 'refugeenext@gmail.com',
-        pass: 'Talas184235'
+        user: '',
+        pass: ''
       }
 });
 

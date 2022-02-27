@@ -8,5 +8,5 @@ const app = express()
 app.use(cors)
 app.post("/pUser", addPUser)
 app.post("/sendEmail", sendCollaborationEmail)
-exports.app = functions.https.onRequest(app)
+exports.app = functions.region("europe-west1").https.onRequest(app)
 
