@@ -25,7 +25,7 @@ var transporter = nodemailer.createTransport({
 
 export const sendCollaborationEmail = (req: Request, res: Response) => {
   const mailOptions = {
-    from: req.body.email,
+    from: process.env.NODEMAILER_AUTH_GMAIL,
     to: process.env.NODEMAILER_AUTH_GMAIL,
     subject:  "New collaboration request from: " + req.body.firstName + " " + req.body.lastName,
     text: `${req.body.firstName} <${req.body.email}> has showed interest in collaborating with us. The comment: ${req.body.comment}`
@@ -43,7 +43,7 @@ export const sendCollaborationEmail = (req: Request, res: Response) => {
 
 const sendConfirmationsEmail = (req: Request, res: Response) => {
   const mailOptions = {
-    from: process.env.NODEMAILER_AUTH_GMAIL,
+    from: `Refugee Next <${process.env.NODEMAILER_AUTH_GMAIL}>`,
     to: req.body.email,
     subject:  "Thank you for your interest",
     text:  "We have received your inquiry and will get back to you soon"
