@@ -1,9 +1,11 @@
 import { Injectable, NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from './../../environments/environment';
 
 
-const baseUrl = 'https://us-central1-ibda-2ff39.cloudfunctions.net/app/puser';
+
+const apiUrl = `${environment.apiURL}/puser`;
 
 @NgModule({
   imports: [
@@ -19,6 +21,6 @@ export class PuserService {
   constructor( private  http: HttpClient) {
    }
   addPUser(data: any): Observable<any> {
-    return this.http.post(baseUrl,data)
+    return this.http.post(apiUrl,data)
   }
 }

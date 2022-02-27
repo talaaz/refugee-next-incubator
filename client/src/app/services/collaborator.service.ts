@@ -1,9 +1,10 @@
 import { Injectable, NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from './../../environments/environment';
 
 
-const baseUrl = 'https://us-central1-ibda-2ff39.cloudfunctions.net/app/collaborator';
+const apiUrl = `${environment.apiURL}/sendEmail`;
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ export class CollaboratorService {
 
   constructor( private  http: HttpClient) {
    }
-  addCollaborator(data: any): Observable<any> {
-    return this.http.post(baseUrl,data)
+  sendCollaboratorEmail(data: any): Observable<any> {
+    return this.http.post(apiUrl,data)
   }
 }

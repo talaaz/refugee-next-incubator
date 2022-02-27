@@ -37,7 +37,7 @@ export class CollaborationsComponent implements OnInit   {
   ngOnInit():  void {
   }
 
-  addCollaborator(): void{
+  sendCollaboratorEmail(): void{
       const data={
         firstName: this.collaborator.firstName,
         lastName: this.collaborator.lastName,
@@ -45,7 +45,7 @@ export class CollaborationsComponent implements OnInit   {
         comment: this.collaborator.comment,
       }
 
-      this.collaboratorService.addCollaborator(data)
+      this.collaboratorService.sendCollaboratorEmail(data)
       .subscribe(
         response => {
           console.log(response);
