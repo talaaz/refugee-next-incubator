@@ -1,5 +1,5 @@
 {
-    "TITLE": "ابدأ",
+    "TITLE": "Refugee Next",
     "SUBTITLE": "Accelerating refugees and socailly disadvangted groups in Denmark",
     "MENU": {
         "LANGUAGE": "Language",
@@ -64,6 +64,17 @@
             }
         }
 
+    },
+    "COLLABORATION":{
+        "TITLE":"Collaborate with us",
+        "INPUT": {
+            "FIRSTNAME": "First Name",
+            "LASTNAME":"Last Name",
+            "EMAIL":"Email ",
+            "COMMENT":"Comment"
+
+
+        }
     }
  
 }

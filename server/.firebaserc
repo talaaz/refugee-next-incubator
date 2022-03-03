@@ -1,5 +1,6 @@
 {
   "projects": {
     "default": "ibda-2ff39"
-  }
+  },
+  "targets": {}
 }

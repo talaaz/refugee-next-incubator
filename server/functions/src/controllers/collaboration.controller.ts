@@ -1,40 +1,64 @@
+import * as nodemailer from "nodemailer";
 import { Response } from 'express'
-import { db } from '../config/firebase'
-
 
 type EntryType = {
-    firstName: string,
-    lastName: string,
-    email: string,
-    comment: string
-  }
-  
-  type Request = {
-    body: EntryType,
-    params: { collaboratorId: string }
-  }
+  firstName: string,
+  lastName: string,
+  email: string,
+  comment:string
+}
 
-export const addCollaborator = async (req: Request, res: Response) => {
-    const { firstName, lastName, email, comment } = req.body
-    try {
-      const collaborator = db.collection('collaborators').doc()
-      const collaboratorObject = {
-        id: collaborator.id,
-        firstName, 
-        lastName, 
-        email, 
-        comment 
-      }
-  
-      collaborator.set(collaboratorObject)
-  
-      res.set("Access-Control-Allow-Origin", "*");
-      res.status(201).send({
-        status: 'success',
-        message: 'collaborator added successfully',
-        data: collaboratorObject
-      })
-    } catch(error) {
-        res.status(500).json(error)
-    }
+type Request = {
+  body: EntryType,
+}
+ 
+
+var transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.NODEMAILER_AUTH_GMAIL,
+    pass: process.env.NODEMAILER_AUTH_PASSWORD
   }
+});
+
+export const sendCollaborationEmail = (req: Request, res: Response) => {
+  const mailOptions = {
+    from: process.env.NODEMAILER_AUTH_GMAIL,
+    to: process.env.NODEMAILER_AUTH_GMAIL,
+    subject:  "New collaboration request from: " + req.body.firstName + " " + req.body.lastName,
+    text: `${req.body.firstName} <${req.body.email}> has showed interest in collaborating with us. The comment: ${req.body.comment}`
+  };
+
+  return transporter.sendMail(mailOptions, (error, info) => {
+      if(error){
+          return res.status(500).send(error.toString());
+      }
+      sendConfirmationsEmail(req, res);
+      return res.status(200).send('Email sent: ' + info.response);
+  });
+
+}
+
+const sendConfirmationsEmail = (req: Request, res: Response) => {
+  const mailOptions = {
+    from: `Refugee Next <${process.env.NODEMAILER_AUTH_GMAIL}>`,
+    to: req.body.email,
+    subject:  "Thank you for your interest",
+    text:  "We have received your inquiry and will get back to you soon"
+  };
+
+  return transporter.sendMail(mailOptions, (error, info) => {
+      if(error){
+          return res.status(500).send(error.toString());
+      }
+      return res.status(200).send('Email sent: ' + info.response);
+  });
+}
+
+
+
+
+ 
+ 

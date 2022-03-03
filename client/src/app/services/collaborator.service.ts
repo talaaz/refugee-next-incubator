@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from './../../environments/environment';
 
 
-
-const apiUrl = `${environment.apiURL}/puser`;
+const apiUrl = `${environment.apiURL}/sendEmail`;
 
 @NgModule({
   imports: [
@@ -16,11 +15,11 @@ const apiUrl = `${environment.apiURL}/puser`;
 @Injectable({
   providedIn: 'root'
 })
-export class PuserService {
+export class CollaboratorService {
 
   constructor( private  http: HttpClient) {
    }
-  addPUser(data: any): Observable<any> {
+  sendCollaboratorEmail(data: any): Observable<any> {
     return this.http.post(apiUrl,data)
   }
 }

@@ -1,25 +1,19 @@
-div {
-  margin: 20px;
+h2 {
+  font-weight: bold;
+  font-style: italic;
+  color: #155e99;
 }
 .example-form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+  font-size: large;
 }
 
 .example-full-width {
   width: 100%;
+  margin-bottom: 10%;
 }
-
-td {
-  padding-right: 8px;
-}
-p {
-  font-size: medium;
-}
-
-h2 {
-  color: #155e99;
-  font-weight: bold;
-  font-style: italic;
+.modal-backdrop {
+  background-color: transparent;
 }

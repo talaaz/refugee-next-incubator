@@ -1,63 +1,80 @@
-<!--
 <div class="container">
-  <h2 class="text-center mb-5">Let's collaborate</h2>
-  <p>Would you like to know more about Digibator? Let's have a chat!</p>
+  <h2>{{ "COLLABORATION.TITLE" | translate }}</h2>
+  <div class="jumbotron">
+    <form class="needs-validation">
+      <!--First name-->
+      <div class="form-group" [formGroup]="contactForm">
+        <label for="uname"
+          >{{ "COLLABORATION.INPUT.FIRSTNAME" | translate }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="collaborator.firstName"
+          name="name"
+          minlength="4"
+        />
+        <div class="valid-feedback">Valid Username.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <!--Last name-->
+      <div class="form-group">
+        <label for="uname">
+          {{ "COLLABORATION.INPUT.LASTNAME" | translate }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="collaborator.lastName"
+          name="name"
+          minlength="4"
+        />
+        <div class="valid-feedback">Valid Username.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
 
-  <form
-    class="example-form"
-    [formGroup]="FormData"
-    (ngSubmit)="onSubmit(FormData.value)"
-  >
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>First name</mat-label>
-            <input formControlName="Firstname" matInput />
-          </mat-form-field>
-        </td>
-        <td>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Last name</mat-label>
-            <input formControlName="Lastname" matInput />
-          </mat-form-field>
-        </td>
-      </tr>
-    </table>
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Email</mat-label>
-      <input
-        type="email"
-        matInput
-        formControlName="Email"
-        [formControl]="emailFormControl"
-        placeholder="Ex. pat@example.com"
-      />
-      <mat-error
-        *ngIf="
-          emailFormControl.hasError('email') &&
-        //  !emailFormControl.hasError('required')
-        "
-      >
-        Please enter a valid email address
-      </mat-error>
-      <mat-error *ngIf="emailFormControl.hasError('required')">
-        Email is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
+      <!--Email-->
+      <div class="form-group">
+        <label for="pwd">{{ "COLLABORATION.INPUT.EMAIL" | translate }}</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pwd"
+          placeholder="Enter email"
+          name="pswd"
+          [(ngModel)]="collaborator.email"
+          required
+        />
+        <div class="valid-feedback">Valid Password.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
 
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Leave a comment</mat-label>
-      <textarea
-        formControlName="Comment"
-        matInput
-        placeholder="Ex. It makes me feel..."
-      ></textarea>
-    </mat-form-field>
+      <!--Comment-->
+      <div class="form-group">
+        <label for="pwd"
+          >{{ "COLLABORATION.INPUT.COMMENT" | translate }}:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="pwd"
+          placeholder="Comment ..."
+          name="pswd"
+          aria-label="Large"
+          [(ngModel)]="collaborator.comment"
+          required
+        />
+        <div class="valid-feedback">Valid Password.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
 
-    <button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">
-      Submit
-    </button>
-  </form>
+      <button type="button" (click)="sendCollaboratorEmail()" class="btn btn-primary">
+        Submit
+      </button>
+    </form>
+  </div>
 </div>
--->
