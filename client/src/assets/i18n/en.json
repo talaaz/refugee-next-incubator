@@ -43,7 +43,11 @@
             "BODY": {
                 "NAMEPLACEHOLDER":"Full name",
                 "BUTTONTITLE":"Sign up"
+            },
+            "NOTIFIER": {
+                "SUCCESSMSG": "You have successfully been signed up"
             }
+
         },
         "TEAM": {
             "TITLE": "A bit about us", 

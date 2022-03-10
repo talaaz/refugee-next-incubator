@@ -43,6 +43,9 @@
             "BODY": {
                 "NAMEPLACEHOLDER":"الاسم الكامل",
                 "BUTTONTITLE":"سجل هنا"
+            },
+            "NOTIFIER": {
+                "SUCCESSMSG": "تم تسجيلك"
             }
         },
         "TEAM": {
