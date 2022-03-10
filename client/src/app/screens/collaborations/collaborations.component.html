@@ -3,7 +3,7 @@
   <div class="jumbotron">
     <form class="needs-validation">
       <!--First name-->
-      <div class="form-group" [formGroup]="contactForm">
+      <div class="form-group">
         <label for="uname"
           >{{ "COLLABORATION.INPUT.FIRSTNAME" | translate }}
         </label>
@@ -72,7 +72,11 @@
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
 
-      <button type="button" (click)="sendCollaboratorEmail()" class="btn btn-primary">
+      <button
+        type="button"
+        (click)="sendCollaboratorEmail()"
+        class="btn btn-primary"
+      >
         Submit
       </button>
     </form>

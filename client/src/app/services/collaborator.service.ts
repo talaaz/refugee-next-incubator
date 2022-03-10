@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from './../../environments/environment';
 
 
-const apiUrl = `${environment.apiURL}/sendEmail`;
+const apiUrl = `https://europe-west1-ibda-2ff39.cloudfunctions.net/app/sendEmail`;
 
 @NgModule({
   imports: [

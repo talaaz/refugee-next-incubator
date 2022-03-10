@@ -44,11 +44,9 @@ export class CollaborationsComponent implements OnInit   {
         email: this.collaborator.email,
         comment: this.collaborator.comment,
       }
-
       this.collaboratorService.sendCollaboratorEmail(data)
       .subscribe(
         response => {
-          console.log(response);
           this.contactForm.reset();
           this.disabledSubmitButton = true;
          },
