@@ -5,7 +5,11 @@
         <div class="col-sm-10 offset-sm-1 text-center">
           <h6 class="display-3">{{ "BODY.SignUp.TITLE" | translate }}</h6>
           <div class="info-form">
-            <form ng-submit action="" class="form-inline justify-content-center">
+            <form
+              ng-submit
+              action=""
+              class="form-inline justify-content-center"
+            >
               <div class="form-group">
                 <label class="sr-only">{{
                   "BODY.SignUp.BODY.NAMEPLACEHOLDER" | translate
@@ -14,6 +18,9 @@
                   <input
                     type="text"
                     class="form-control"
+                    placeholder="{{
+                      'BODY.SignUp.BODY.NAMEPLACEHOLDER' | translate
+                    }}"
                     id="name"
                     required
                     [(ngModel)]="puser.name"

@@ -41,7 +41,7 @@
         "SignUp":{
             "TITLE": "هل انت مهتم?سجل الان وسوف نتواصل معك لاحقا",
             "BODY": {
-                "NAMEPLACEHOLDER":"الاسم الكامل",
+                "NAMEPLACEHOLDER":"الاسم الكامل أو الايميل ",
                 "BUTTONTITLE":"سجل هنا"
             },
             "NOTIFIER": {

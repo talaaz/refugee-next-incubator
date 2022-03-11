@@ -41,7 +41,7 @@
         "SignUp":{
             "TITLE": "Are you interested? sign up now and we will contact you soon",
             "BODY": {
-                "NAMEPLACEHOLDER":"Full name",
+                "NAMEPLACEHOLDER":"Full name or Email",
                 "BUTTONTITLE":"Sign up"
             },
             "NOTIFIER": {
